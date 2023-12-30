@@ -64,6 +64,7 @@ with open(output_path, "w") as textfile:
     row4 = textfile.write("------------------\n")
     #using for loop with enumerate function again to write the vote_count for each candidate
     for index, candidate in enumerate(candidates_list):
+        vote_percentage = (vote_count[index]/total_votes_casted)*100
         row5 = textfile.write(f"{candidate}: {vote_percentage:.3f}%  ({vote_count[index]} votes)\n")
     row6 = textfile.write(" \n")
     row7 = textfile.write(f"Winner: {winner_candidate}\n")
